@@ -1,3 +1,61 @@
 <p>
-  Chinese form works!
+  {{ formTitle }} Chinese form works!
 </p>
+<!-- <input type = "submit" [value] = "submit" [ngClass]="'button'" [ngStyle]="{'color':'red' , 'background-color':'aqua'}" />
+<br>
+<br>
+<input type = "submit" value = "textbox" [ngClass]="'button'" (click) = "changeType('textbox')" />
+<input type = "submit" value = "radio" [ngClass]="'button'" (click) = "changeType('radio')" />
+<input [type] = "customType" />
+<br><br>
+
+<input type = "text" name="studentFirstName" [ngClass]="'textbox'" [ngStyle]="style" placeholder = "Enter First Name" [(ngModel)] = "studentFirstName" /> <br>
+<input type = "text" name="studentLastName" [ngClass]="'textbox'" placeholder = "Enter Last Name" [(ngModel)] = "studentLastName" /> <br>
+<input type = "number" name="studentAge" [ngClass]="'textbox'" placeholder = "Enter Age" [(ngModel)] = "studentAge"/> <br>
+<input type = "button" [value] = "submit" [ngClass]="'button'" (click) = "studentDetails()" />
+<br><br>
+First Name : {{ studentFirstName }} <br>
+Last Name : {{ studentLastName }} <br>
+Age : {{ studentAge }} <br> <br>
+
+<input type="button" [ngClass]="'button'" [value]="ShowButton" (click)="showHide()" /> <br>
+<table border="1">
+  <thead>
+      <th> First Name </th>
+      <th> Last Name </th> 
+      <th> Age </th>
+  </thead>
+  <tbody [hidden]="!show">
+    <tr *ngFor="let data of studentData" > -->
+      <!-- <td> {{ data | json }} </td> -->
+      <!-- <td> {{ data.sfname }} </td> 
+      <td> {{ data.slname }} </td> 
+      <td> {{ data.sage }} </td> 
+    </tr>
+  </tbody>
+</table> -->
+
+
+<!-- <div *ngIf="studentFirstName; else age">
+  {{ studentFirstName }}
+</div> -->
+
+<!-- <ng-container
+  *ngIf="studentFirstName; then fname; else age">
+</ng-container>
+
+<ng-template #fname>
+  {{ studentFirstName }}
+</ng-template>
+
+<ng-template #age>
+  {{ studentAge }}
+</ng-template> -->
+<br>
+<!-- 
+<div [hidden]="!show">
+  <p>
+    {{ formTitle }}
+  </p>
+</div> -->
+
