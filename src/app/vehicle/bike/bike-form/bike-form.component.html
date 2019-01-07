@@ -1,0 +1,14 @@
+<hr> <hr>
+<p>
+  bike-form works!
+</p>
+
+<input type="text" name="bikeBrand" placeholder="Enter Bike Brand" [(ngModel)]="bikeBrand" /> <br>
+<input type="text" name="bikeModel" placeholder="Enter Bike Model" [(ngModel)]="bikeModel" /> <br>
+<input type="number" name="bikeEngineType" placeholder="Enter Bike Engine Type" [(ngModel)]="bikeEngineType" /> <br>
+
+<input type="button" name="submit" [value]="submit" (click)="bikeDetails()" /> <br>
+
+<!-- {{bikeBrand}} <br>
+{{bikeModel}} <br>
+{{bikeEngineType}} -->

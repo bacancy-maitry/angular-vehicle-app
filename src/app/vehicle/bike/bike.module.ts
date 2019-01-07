@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormComponent } from './form/form.component';
-import { TableComponent } from './table/table.component';
+import { BikeFormComponent } from './bike-form/bike-form.component';
+import { BikeTableComponent } from './bike-table/bike-table.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
-  declarations: [FormComponent, TableComponent]
+  declarations: [BikeFormComponent, BikeTableComponent],
+  exports: [BikeFormComponent,BikeTableComponent]
 })
 export class BikeModule { }

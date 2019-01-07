@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChineseFormComponent } from './chinese-form.component';
+import { BikeTableComponent } from './bike-table.component';
 
-describe('ChineseFormComponent', () => {
-  let component: ChineseFormComponent;
-  let fixture: ComponentFixture<ChineseFormComponent>;
+describe('BikeTableComponent', () => {
+  let component: BikeTableComponent;
+  let fixture: ComponentFixture<BikeTableComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChineseFormComponent ]
+      declarations: [ BikeTableComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChineseFormComponent);
+    fixture = TestBed.createComponent(BikeTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

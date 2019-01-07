@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { VehicleModule } from './vehicle/vehicle.module';
-import { FoodModule } from './food/food.module';
 
 @NgModule({
   declarations: [
@@ -10,8 +9,7 @@ import { FoodModule } from './food/food.module';
   ],
   imports: [
     BrowserModule,
-    VehicleModule,
-    FoodModule
+    VehicleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
