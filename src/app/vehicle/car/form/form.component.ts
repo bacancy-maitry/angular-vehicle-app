@@ -6,26 +6,32 @@ import { CarInterface } from '../car-interface';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent implements OnInit,CarInterface {
+export class FormComponent implements OnInit {
   
   submit: string = "Click Me!";
 
-  carType: string;
-  carBrand: string;
-  carModel: string;
-  carEngineType: number;
-  carArray: Array<CarInterface> = []; 
+  // carType: string;
+  // carBrand: string;
+  // carModel: string;
+  // carEngineType: number;
+  carInstance: CarInterface;
+  carTypeArray:Array<string> = ["Hatchback","Sedan","Crossover"];
 
-  carDetails(): CarInterface {
-    let carObj: CarInterface = {
-      carType: this.carType,
-      carBrand: this.carBrand,
-      carModel: this.carModel,
-      carEngineType: Number(this.carEngineType) || 0
+  carObj:CarInterface = {
+    carType:null,
+    carBrand:null,
+    carModel:null,
+    carEngineType:null,
+  }
+
+  carDetails(): void {
+    this.carInstance = {
+      carType: this.carObj.carType,
+      carBrand: this.carObj.carBrand,
+      carModel: this.carObj.carModel,
+      carEngineType: Number(this.carObj.carEngineType) || 0
     }
-    this.carArray.push(carObj);
-    console.log(this.carArray);
-    return carObj;
+    console.log(this.carInstance);
   }
 
   constructor() { }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { CarInterface } from '../car-interface';
 
 @Component({
@@ -6,16 +6,32 @@ import { CarInterface } from '../car-interface';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css']
 })
-export class TableComponent implements OnInit {
+export class TableComponent implements OnInit, OnChanges {
 
   // @Input('carType') carType: string;
   // @Input('carModel') carModel: string;
   // @Input('carBrand') carBrand: string;
-  @Input('carArray') carArray :Array<CarInterface> ;
-
+  
+  carArray: Array<CarInterface> = [];
+  @Input('carInstance') carInstance :CarInterface ;
+  
   constructor() { }
 
   ngOnInit() {
   }
+
+  ngOnChanges(changes: SimpleChanges): void{
+    console.log(changes);
+    if(changes && changes.carInstance && changes.carInstance.firstChange == false){
+      console.log("HELLO");
+      this.carArray.push(this.carInstance);
+      console.log(this.carArray);
+    }
+    else{
+      console.log("abc");
+    }
+  }
+
+  
 
 }

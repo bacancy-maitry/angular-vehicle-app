@@ -5,25 +5,20 @@
 <div class="mainDiv">
   <p> {{ formTitle }} Car form works! </p>
   <div class="formDiv">
-    <select name="carType" [(ngModel)]="carType">
-      <option value="Hatchback">Hatchback</option>
+    <select name="carType" [(ngModel)]="carObj.carType">
+      <!-- <option value="Hatchback">Hatchback</option>
       <option value="Sedan">Sedan</option>
-      <option value="Crossover">Crossover</option>
+      <option value="Crossover">Crossover</option> -->
+      <option *ngFor="let data of carTypeArray">{{data}}</option>
     </select> <br>
 
-    <input type="text" name="carBrand" placeholder="Enter Car Brand" [(ngModel)]="carBrand" /> <br>
-    <input type="text" name="carModel" placeholder="Enter Car Model" [(ngModel)]="carModel" /> <br>
-    <input type="number" name="carEngineType" placeholder="Enter Car Engine Type" [(ngModel)]="carEngineType" /> <br>
+    <input type="text" name="carBrand" placeholder="Enter Car Brand" [(ngModel)]="carObj.carBrand" /> <br>
+    <input type="text" name="carModel" placeholder="Enter Car Model" [(ngModel)]="carObj.carModel" /> <br>
+    <input type="number" name="carEngineType" placeholder="Enter Car Engine Type" [(ngModel)]="carObj.carEngineType" /> <br>
     <input type="button" [value] = "submit" (click) = "carDetails()" /> <br>
   </div>
-  
-  <!-- {{carType}} <br>
-  {{carBrand}} <br>
-  {{carModel}} <br>
-  {{carEngineType}} <br> -->
-
   <!-- <app-table [carArray]="carArray" [carType]="carType" [carModel]="carModel" [carBrand]="carBrand"></app-table> -->
   <div class="tableDiv">
-    <app-table [carArray]="carArray"></app-table>
+    <app-table [carInstance]="carInstance"></app-table>
   </div>
 </div>
