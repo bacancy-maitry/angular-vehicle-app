@@ -1,0 +1,21 @@
+<hr>
+<p>
+  Cycle-table works!
+</p>
+
+<table border="2">
+  <thead>
+    <th> Cycle Brand </th>
+    <th> Cycle Model </th>
+    <th> Cycle Purchase Year </th>
+    <th> Cycle Price </th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of cycleArray">
+      <td> {{data.cycleBrand}} </td>
+      <td> {{data.cycleModel}} </td>
+      <td> {{data.cyclePurchaseYear}} </td>
+      <td> {{data.cyclePrice}} </td>
+    </tr>
+  </tbody>
+</table>

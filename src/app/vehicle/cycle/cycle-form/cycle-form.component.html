@@ -1,0 +1,20 @@
+<hr>
+<p>
+  Cycle-form works!
+</p>
+
+<select name="cycleBrand" [(ngModel)]="cycleBrand">
+  <option value="40000">Atlas</option>
+  <option value="20000">Avon</option>
+  <option value="50000">Bianchi</option>
+  <option value="10000">BSA</option>
+</select> <br>
+<input type="text" name="cycleModel" placeholder="Enter Cycle Model" [(ngModel)]="cycleModel" /> <br>
+<input type="number" name="cyclePurchaseYear" placeholder="Enter Cycle Purchase Year" [(ngModel)]="cyclePurchaseYear" /> <br>
+<input type="button" name="submit" [value]="submit" (click)="cycleDetails()" /> <br>
+
+{{cycleBrand}}
+{{cycleModel}}
+{{cyclePurchaseYear}}
+
+<app-cycle-table [cycleArray]="cycleArray" ></app-cycle-table>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BikeInterface } from '../bike-interface';
 
 @Component({
   selector: 'app-bike-table',
@@ -9,7 +10,7 @@ export class BikeTableComponent implements OnInit {
 
   bikeData:Array<any> = [];
 
-  displayBikeData(paramArray){
+  displayBikeData(paramArray:Array<BikeInterface>){
     console.log("In Parent");
     this.bikeData = paramArray;
     // console.log(this.bikeData);
