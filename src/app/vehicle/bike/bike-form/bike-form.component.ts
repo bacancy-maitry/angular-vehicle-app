@@ -27,7 +27,7 @@ export class BikeFormComponent implements OnInit {
     this.bikeInstance = {
       bikeBrand:this.bikeObj.bikeBrand,
       bikeModel:this.bikeObj.bikeModel,
-      bikeEngineType:this.bikeObj.bikeEngineType,
+      bikeEngineType:Number(this.bikeObj.bikeEngineType),
       vehicleWheels:this.bikeObj.vehicleWheels,
       vehicleSeats:this.bikeObj.vehicleSeats,
     }
