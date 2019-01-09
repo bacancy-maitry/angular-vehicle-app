@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { VehicleModule } from './vehicle/vehicle.module';
+import { CookieService } from 'ngx-cookie-service';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -9,9 +12,10 @@ import { VehicleModule } from './vehicle/vehicle.module';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     VehicleModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
