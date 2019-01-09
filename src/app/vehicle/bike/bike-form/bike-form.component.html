@@ -2,12 +2,11 @@
 <p>
   bike-form works!
 </p>
+<input type="number" name="vehicleWheels" placeholder="Enter Bike Wheels" [(ngModel)]="bikeObj.vehicleWheels" /> <br>
+<input type="number" name="vehicleSeats" placeholder="Enter Bike Seats" [(ngModel)]="bikeObj.vehicleSeats" /> <br>
 <select name="bikeBrand" [(ngModel)]="bikeObj.bikeBrand">
   <option *ngFor="let data of bikeBrandArray">{{data}}</option>
 </select> <br>
 <input type="text" name="bikeModel" placeholder="Enter Bike Model" [(ngModel)]="bikeObj.bikeModel" /> <br>
 <input type="number" name="bikeEngineType" placeholder="Enter Bike Engine Type" [(ngModel)]="bikeObj.bikeEngineType" /> <br>
 <input type="button" name="submit" [value]="submit" (click)="bikeDetails()" /> <br>
-<!-- {{bikeBrand}} <br>
-{{bikeModel}} <br>
-{{bikeEngineType}} -->

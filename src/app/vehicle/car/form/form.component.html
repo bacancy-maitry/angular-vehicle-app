@@ -1,6 +1,3 @@
-  <!-- <p> 
-    {{ formTitle }} Car form works!
-  </p> -->
 <hr> 
 <div class="mainDiv">
   <p> {{ formTitle }} Car form works! </p>
@@ -8,9 +5,6 @@
     <input type="number" name="vehicleWheels" placeholder="Enter No of Wheels" [(ngModel)]="carObj.vehicleWheels"> <br>
     <input type="number" name="vehicleSeats" placeholder="Enter No of Seats" [(ngModel)]="carObj.vehicleSeats"> <br>
     Select Car Type: <select name="carType" [(ngModel)]="carObj.carType">
-      <!-- <option value="Hatchback">Hatchback</option>
-      <option value="Sedan">Sedan</option>
-      <option value="Crossover">Crossover</option> -->
       <option *ngFor="let data of carTypeArray">{{data}}</option>
     </select> <br>
 
@@ -20,7 +14,6 @@
     
     <input type="button" [value] = "submit" (click) = "carDetails()" /> <br>
   </div>
-  <!-- <app-table [carArray]="carArray" [carType]="carType" [carModel]="carModel" [carBrand]="carBrand"></app-table> -->
   <div class="tableDiv">
     <app-table [carInstance]="carInstance"></app-table>
   </div>

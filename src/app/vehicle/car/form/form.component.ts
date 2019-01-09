@@ -20,7 +20,7 @@ export class FormComponent implements OnInit {
     vehicleWheels:null,
     vehicleSeats:null,
   }
-
+  
   carDetails(): void {
     this.carInstance = {
       carType: this.carObj.carType,

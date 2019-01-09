@@ -5,6 +5,8 @@
 
 <table border="2">
   <thead>
+    <th> Cycle Wheels </th>
+    <th> Cycle Seats </th>
     <th> Cycle Brand </th>
     <th> Cycle Model </th>
     <th> Cycle Purchase Year </th>
@@ -12,6 +14,8 @@
   </thead>
   <tbody>
     <tr *ngFor="let data of cycleArray">
+      <td> {{data.vehicleWheels}} </td>
+      <td> {{data.vehicleSeats}} </td>
       <td> {{data.cycleBrand}} </td>
       <td> {{data.cycleModel}} </td>
       <td> {{data.cyclePurchaseYear}} </td>

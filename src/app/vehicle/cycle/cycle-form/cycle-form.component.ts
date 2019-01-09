@@ -10,9 +10,7 @@ import { CycleBrand } from '../cycle-brand.enum';
 export class CycleFormComponent implements OnInit {
 
   submit:string = "Click Me!";
-
   cycleBrandArray:Array<any> = [];
-
   cycleInstace: CycleInterface;
 
   cycleObj={
@@ -20,6 +18,8 @@ export class CycleFormComponent implements OnInit {
     cycleModel:null,
     cyclePurchaseYear:null,
     cyclePrice:null,
+    vehicleWheels:null,
+    vehicleSeats:null,
   }
   
   cycleDetails(): void{
@@ -28,6 +28,8 @@ export class CycleFormComponent implements OnInit {
       cycleModel: this.cycleObj.cycleModel,
       cyclePurchaseYear: this.cycleObj.cyclePurchaseYear,
       cyclePrice: Number(this.cycleObj.cycleBrand),
+      vehicleWheels: this.cycleObj.vehicleWheels,
+      vehicleSeats: this.cycleObj.vehicleSeats,
     }
     console.log(this.cycleInstace);
   }

@@ -1,6 +1,6 @@
-import { CycleBrand } from "./cycle-brand.enum";
+import { VehicleInterface } from "../vehicle-interface";
 
-export interface CycleInterface {
+export interface CycleInterface extends VehicleInterface {
     cycleBrand: string;
     cycleModel: string;
     cyclePurchaseYear: number;

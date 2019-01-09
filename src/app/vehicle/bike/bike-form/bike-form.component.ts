@@ -9,17 +9,18 @@ import { BikeInterface } from '../bike-interface';
 })
 export class BikeFormComponent implements OnInit {
 
-  submit:string = "Click Me!";
-
   @Output() bikeData = new EventEmitter();
-  
+
+  submit:string = "Click Me!";  
   bikeBrandArray: Array<string> = ["Yamaha","Ducati","Honda","Suzuki"];
   bikeInstance:BikeInterface;
 
   bikeObj = {
     bikeBrand:null,
     bikeModel:null,
-    bikeEngineType:null,    
+    bikeEngineType:null,
+    vehicleWheels:null,
+    vehicleSeats:null,    
   }
 
   bikeDetails(): void{
@@ -27,6 +28,8 @@ export class BikeFormComponent implements OnInit {
       bikeBrand:this.bikeObj.bikeBrand,
       bikeModel:this.bikeObj.bikeModel,
       bikeEngineType:this.bikeObj.bikeEngineType,
+      vehicleWheels:this.bikeObj.vehicleWheels,
+      vehicleSeats:this.bikeObj.vehicleSeats,
     }
     console.log(this.bikeInstance);
     this.bikeData.emit(this.bikeInstance);

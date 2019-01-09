@@ -1,26 +1,14 @@
-<br>
-<hr><hr>
+<br><hr><hr>
 <p>
   Cycle-form works!
 </p>
-
-<!-- <select name="cycleBrand" [(ngModel)]="cycleBrand">
-  <option value="40000">Atlas</option>
-  <option value="20000">Avon</option>
-  <option value="50000">Bianchi</option>
-  <option value="10000">BSA</option>
-</select> <br> -->
-
+<input type="number" name="vehicleWheels" placeholder="Enter Cycle Wheels" [(ngModel)]="cycleObj.vehicleWheels" /> <br>
+<input type="number" name="vehicleSeats" placeholder="Enter Cycle Seats" [(ngModel)]="cycleObj.vehicleSeats" /> <br>
 <select name="carBrand" [(ngModel)]="cycleObj.cycleBrand">
   <option *ngFor="let data of cycleBrandArray" value="{{data.price}}">{{data.cycleBrand}}</option>
 </select> <br>
-
 <input type="text" name="cycleModel" placeholder="Enter Cycle Model" [(ngModel)]="cycleObj.cycleModel" /> <br>
 <input type="number" name="cyclePurchaseYear" placeholder="Enter Cycle Purchase Year" [(ngModel)]="cycleObj.cyclePurchaseYear" /> <br>
 <input type="button" name="submit" [value]="submit" (click)="cycleDetails()" /> <br>
-
-{{cycleBrand}}
-{{cycleModel}}
-{{cyclePurchaseYear}}
 
 <app-cycle-table [cycleInstace]="cycleInstace" ></app-cycle-table>

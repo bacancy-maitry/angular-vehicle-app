@@ -8,10 +8,6 @@ import { CarInterface } from '../car-interface';
 })
 export class TableComponent implements OnInit, OnChanges {
 
-  // @Input('carType') carType: string;
-  // @Input('carModel') carModel: string;
-  // @Input('carBrand') carBrand: string;
-  
   carArray: Array<CarInterface> = [];
   @Input('carInstance') carInstance :CarInterface ;
   
