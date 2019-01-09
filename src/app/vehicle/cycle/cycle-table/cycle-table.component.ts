@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { CycleInterface } from '../cycle-interface';
 
 @Component({
@@ -6,9 +6,20 @@ import { CycleInterface } from '../cycle-interface';
   templateUrl: './cycle-table.component.html',
   styleUrls: ['./cycle-table.component.css']
 })
-export class CycleTableComponent implements OnInit {
+export class CycleTableComponent implements OnInit, OnChanges {
 
-  @Input("cycleArray") cycleArray: Array<CycleInterface> = [];
+  cycleArray: Array<CycleInterface> = [];
+  @Input("cycleInstace") cycleInstace: CycleInterface;
+
+  ngOnChanges(changes: SimpleChanges): void{
+    console.log(changes);
+    if(changes && changes.cycleInstace && changes.cycleInstace.firstChange == false){
+      this.cycleArray.push(this.cycleInstace);
+    }
+    else{
+      console.log("Cycle Else Block");
+    }
+  }
 
   constructor() { }
 

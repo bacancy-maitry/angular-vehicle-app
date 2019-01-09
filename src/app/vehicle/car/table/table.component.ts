@@ -23,12 +23,11 @@ export class TableComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void{
     console.log(changes);
     if(changes && changes.carInstance && changes.carInstance.firstChange == false){
-      console.log("HELLO");
       this.carArray.push(this.carInstance);
       console.log(this.carArray);
     }
     else{
-      console.log("abc");
+      console.log("Car Else Block");
     }
   }
 

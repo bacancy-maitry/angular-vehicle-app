@@ -9,19 +9,16 @@ import { CarInterface } from '../car-interface';
 export class FormComponent implements OnInit {
   
   submit: string = "Click Me!";
-
-  // carType: string;
-  // carBrand: string;
-  // carModel: string;
-  // carEngineType: number;
   carInstance: CarInterface;
   carTypeArray:Array<string> = ["Hatchback","Sedan","Crossover"];
 
-  carObj:CarInterface = {
+  carObj = {
     carType:null,
     carBrand:null,
     carModel:null,
     carEngineType:null,
+    vehicleWheels:null,
+    vehicleSeats:null,
   }
 
   carDetails(): void {
@@ -29,7 +26,9 @@ export class FormComponent implements OnInit {
       carType: this.carObj.carType,
       carBrand: this.carObj.carBrand,
       carModel: this.carObj.carModel,
-      carEngineType: Number(this.carObj.carEngineType) || 0
+      carEngineType: Number(this.carObj.carEngineType) || 0,
+      vehicleWheels: this.carObj.vehicleWheels,
+      vehicleSeats: this.carObj.vehicleSeats,
     }
     console.log(this.carInstance);
   }

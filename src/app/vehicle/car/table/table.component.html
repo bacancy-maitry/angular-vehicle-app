@@ -9,14 +9,18 @@ Car Model: {{carModel}} -->
 
 <table border="1">
   <thead>
-      <th> Car Type </th>
-      <th> Car Brand </th> 
-      <th> Car Model </th>
-      <th> Car Engine Type </th>
+    <th> Car Wheels </th>
+    <th> Car Seats </th>
+    <th> Car Type </th>
+    <th> Car Brand </th> 
+    <th> Car Model </th>
+    <th> Car Engine Type </th>
   </thead>
   <tbody>
     <tr *ngFor="let data of carArray" >
       <!-- <td> {{ data | json }} </td> -->
+      <td> {{ data.vehicleWheels }} </td>
+      <td> {{ data.vehicleSeats }} </td>
       <td> {{ data.carType }} </td> 
       <td> {{ data.carBrand }} </td> 
       <td> {{ data.carModel }} </td> 

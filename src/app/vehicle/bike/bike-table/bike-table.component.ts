@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges ,SimpleChanges } from '@angular/core';
 import { BikeInterface } from '../bike-interface';
 
 @Component({
@@ -8,12 +8,15 @@ import { BikeInterface } from '../bike-interface';
 })
 export class BikeTableComponent implements OnInit {
 
-  bikeData:Array<any> = [];
+  bikeArray:Array<any> = [];
 
   displayBikeData(paramArray:Array<BikeInterface>){
     console.log("In Parent");
-    this.bikeData = paramArray;
-    // console.log(this.bikeData);
+    this.bikeArray.push(paramArray);
+  }
+
+  ngOnChanges(changes: SimpleChanges): void{
+    console.log(changes);
   }
 
   constructor() { }

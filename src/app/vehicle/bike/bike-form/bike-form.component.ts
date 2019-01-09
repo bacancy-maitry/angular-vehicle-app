@@ -13,22 +13,23 @@ export class BikeFormComponent implements OnInit {
 
   @Output() bikeData = new EventEmitter();
   
-  bikeBrand: string;
-  bikeModel: string;
-  bikeEngineType: number;
-  bikeArray: Array<BikeInterface> = [];
+  bikeBrandArray: Array<string> = ["Yamaha","Ducati","Honda","Suzuki"];
+  bikeInstance:BikeInterface;
 
-  bikeDetails():BikeInterface{
-    let bikeObj:BikeInterface = {
-      bikeBrand: this.bikeBrand,
-      bikeModel: this.bikeModel,
-      bikeEngineType: Number(this.bikeEngineType),
+  bikeObj = {
+    bikeBrand:null,
+    bikeModel:null,
+    bikeEngineType:null,    
+  }
+
+  bikeDetails(): void{
+    this.bikeInstance = {
+      bikeBrand:this.bikeObj.bikeBrand,
+      bikeModel:this.bikeObj.bikeModel,
+      bikeEngineType:this.bikeObj.bikeEngineType,
     }
-    this.bikeArray.push(bikeObj);
-    console.log("In child");
-    // console.log(this.bikeArray);
-    this.bikeData.emit(this.bikeArray);
-    return bikeObj;
+    console.log(this.bikeInstance);
+    this.bikeData.emit(this.bikeInstance);
   }
 
   constructor() { }

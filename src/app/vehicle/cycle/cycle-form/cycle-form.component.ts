@@ -7,30 +7,51 @@ import { CycleBrand } from '../cycle-brand.enum';
   templateUrl: './cycle-form.component.html',
   styleUrls: ['./cycle-form.component.css']
 })
-export class CycleFormComponent implements OnInit,CycleInterface {
+export class CycleFormComponent implements OnInit {
 
   submit:string = "Click Me!";
 
-  cycleBrand: string;
-  cycleModel: string;
-  cyclePurchaseYear: number;
-  cyclePrice: number;
-  cycleArray: Array<CycleInterface> = [];
+  cycleBrandArray:Array<any> = [];
 
-  cycleDetails():CycleInterface{
-    let cycleObj:CycleInterface = {
-      cycleBrand: CycleBrand[this.cycleBrand],
-      cycleModel: this.cycleModel,
-      cyclePurchaseYear: Number(this.cyclePurchaseYear),
-      cyclePrice: Number(this.cycleBrand),
+  cycleInstace: CycleInterface;
+
+  cycleObj={
+    cycleBrand:null,
+    cycleModel:null,
+    cyclePurchaseYear:null,
+    cyclePrice:null,
+  }
+  
+  cycleDetails(): void{
+    this.cycleInstace={
+      cycleBrand: CycleBrand[this.cycleObj.cycleBrand],
+      cycleModel: this.cycleObj.cycleModel,
+      cyclePurchaseYear: this.cycleObj.cyclePurchaseYear,
+      cyclePrice: Number(this.cycleObj.cycleBrand),
     }
-    this.cycleArray.push(cycleObj);
-    // console.log(cycleObj);
-    // console.log(this.cycleArray);
-    return cycleObj;
+    console.log(this.cycleInstace);
   }
 
-  constructor() { }
+  constructor() { 
+    this.cycleBrandArray = [
+      {
+        "price": 40000,
+        "cycleBrand": "Atlas"
+      },
+      {
+        "price": 20000,
+        "cycleBrand": "Avon"
+      },
+      {
+        "price": 50000,
+        "cycleBrand": "Bianchi"
+      },
+      {
+        "price": 10000,
+        "cycleBrand": "BSA"
+      },
+    ]
+  }
 
   ngOnInit() {
   }
